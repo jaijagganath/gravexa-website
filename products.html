@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Makhana Catalog — Gravexa Agrow</title>
+  <meta name="description" content="Browse the full Gravexa Agrow Makhana catalog — Suta 3–6 and curated blends 3–5, 5–6, 4–6, and 6+ (Rajanya).">
+  <link rel="canonical" href="https://www.gravexaagrow.com/products.html">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header container">
+    <a class="brand" href="index.html">
+      <img src="img/logo.png" alt="Gravexa Agrow logo" class="logo">
+      <div class="brand-text">
+        <span class="brand-name">GRAVEXA <strong>AGROW</strong></span>
+        <span class="brand-tagline">Premium Makhana</span>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Catalog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Makhana Catalog</h1>
+    <p>Filter by size (Suta), blends, and packaging. Click any item to open an enquiry drawer.</p>
+
+    <div class="filters">
+      <input id="search" type="search" placeholder="Search (e.g., Suta 5, Rajanya, export)">
+      <select id="category">
+        <option value="all">All categories</option>
+        <option value="single" id="single">Single Size</option>
+        <option value="blend" id="blends">Blends</option>
+      </select>
+      <select id="suta">
+        <option value="any">Any Suta</option>
+        <option value="3">Suta 3</option>
+        <option value="4">Suta 4</option>
+        <option value="5">Suta 5</option>
+        <option value="6">Suta 6</option>
+        <option value="6+">6+</option>
+      </select>
+      <select id="pack">
+        <option value="any">Any pack</option>
+        <option value="200g">200g</option>
+        <option value="500g">500g</option>
+        <option value="1kg">1kg</option>
+        <option value="25kg">25kg bulk</option>
+      </select>
+      <select id="sort">
+        <option value="default">Sort</option>
+        <option value="name">Name A–Z</option>
+        <option value="suta">Suta low→high</option>
+      </select>
+    </div>
+
+    <div id="catalog" class="catalog-grid"></div>
+
+    <section id="export" class="export-note">
+      <h2>Export & Commercial</h2>
+      <p>We support FOB/CIF quotations with documents and HS Code <strong>20081990</strong>. MOQ and lead times depend on seasonality and grade. Use the enquiry form to share destination port and target volumes.</p>
+    </section>
+  </main>
+
+  <div id="drawer" class="drawer hidden" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-content">
+      <button class="drawer-close" id="drawerClose" aria-label="Close">✕</button>
+      <h2 id="drawerTitle"></h2>
+      <p id="drawerSub"></p>
+      <form id="enquiryForm" class="enquiry">
+        <div class="row"><label>Company/Name<input name="name" required></label></div>
+        <div class="row"><label>Email<input type="email" name="email" required></label></div>
+        <div class="row"><label>Phone<input name="phone"></label></div>
+        <div class="row"><label>Quantity & Pack<input name="qty" placeholder="e.g., 2 MT, 25kg bags"></label></div>
+        <div class="row"><label>Notes<textarea name="notes" rows="4" placeholder="Destination port, Incoterms, certifications required…"></textarea></label></div>
+        <button class="btn primary" type="submit">Send Enquiry</button>
+        <p class="small">By submitting, you consent to contact regarding this product. We’ll reply from <em>sales@gravexaagrow.com</em>.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "gravexa-agrow-website",
+  "version": "1.0.0",
+  "description": "Static site for Gravexa Agrow \u2014 Makhana catalog (Suta 3\u20136 & blends).",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --no-browser --port=5173 .",
+    "format": "prettier --write .",
+    "lint": "echo 'No lint step for static site'",
+    "build": "echo 'Static site \u2014 nothing to build'"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.3.3"
+  }
+}
