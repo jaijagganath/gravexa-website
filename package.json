@@ -7,7 +7,8 @@
     "dev": "live-server --no-browser --port=5173 .",
     "format": "prettier --write .",
     "lint": "echo 'No lint step for static site'",
-    "build": "echo 'Static site \u2014 nothing to build'"
+    "build": "echo 'Static site \u2014 nothing to build'",
+    "test": "node test/filter.test.js"
   },
   "devDependencies": {
     "live-server": "^1.2.2",

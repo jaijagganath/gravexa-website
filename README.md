@@ -12,7 +12,7 @@ This is a lightweight, production-ready static website for **Gravexa Agrow** to 
 - Color system aligned to Gravexa palette: leafy green, deep blue, gold, sky blue, orange accents.
 
 ## Logo
-- Place your logo at `img/logo.png`. The current repo includes a copy of your provided logo.
+- Place your logo at `logo.png`. The current repo includes a copy of your provided logo.
 
 ## Deploy
 Any static host works:
@@ -22,7 +22,7 @@ Any static host works:
 
 ## Customize
 - Update contact info & addresses in `index.html` footer.
-- Add pricing or live inventory: extend `PRODUCTS` array in `js/app.js` with `price` values and optional fields.
+- Add pricing or live inventory: extend `PRODUCTS` array in `app.js` with `price` values and optional fields.
 - Add more images: replace generated SVG thumbs with product photos.
 
 ## Structured Data (optional)
@@ -61,4 +61,4 @@ docker run -p 8080:80 gravexa-agrow
 ### House-keeping
 - Format code: `npm run format`
 - Update `sitemap.xml` when adding pages.
-- Replace `img/logo.png` if you update the logo.
+- Replace `logo.png` if you update the logo.

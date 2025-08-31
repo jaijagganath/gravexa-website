@@ -87,35 +87,13 @@ function setupInteractions(){
   const sort = document.getElementById('sort');
 
   function applyFilters(){
-    let list = PRODUCTS.slice();
-
-    const q = (search.value || '').toLowerCase().trim();
-    if(q) list = list.filter(p =>
-      p.name.toLowerCase().includes(q) ||
-      p.suta.toLowerCase().includes(q) ||
-      p.type.toLowerCase().includes(q) ||
-      p.notes.toLowerCase().includes(q)
-    );
-
-    if(category.value !== 'all'){
-      list = list.filter(p => p.type === category.value);
-    }
-
-    if(suta.value !== 'any'){
-      list = list.filter(p => p.suta.includes(suta.value));
-    }
-
-    if(pack.value !== 'any'){
-      list = list.filter(p => p.packs.includes(pack.value));
-    }
-
-    if(sort.value === 'name'){
-      list.sort((a,b) => a.name.localeCompare(b.name));
-    } else if (sort.value === 'suta'){
-      const n = s => parseInt(s.replace('+','').split('–')[0],10);
-      list.sort((a,b) => n(a.suta)-n(b.suta));
-    }
-
+    const list = filterProducts(PRODUCTS, {
+      search: search.value,
+      category: category.value,
+      suta: suta.value,
+      pack: pack.value,
+      sort: sort.value,
+    });
     render(list);
   }
 
